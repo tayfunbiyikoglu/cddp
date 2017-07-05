@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CEB Data deletion project Techincal documentation">
+      
+      
+      
+        <meta name="author" content="Tayfun Biyikoglu">
+      
+      
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.1">
+    
+    
+      
+        <title>Destruction Execution - Customer Data Deletion</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f98ca285f9.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-8817cfa535.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Customer Data Deletion" class="md-logo md-header-nav__button">
+            <img src="../../images/ceb1.jpg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Implementation Steps
+                </span>
+              
+            
+            Destruction Execution
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../images/ceb1.jpg">
+      </i>
+    
+    Customer Data Deletion
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/" title="Architectural Design" class="md-nav__link">
+      Architectural Design
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Implementation Steps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Implementation Steps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selection/" title="Customer/Applicant Selection" class="md-nav__link">
+      Customer/Applicant Selection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../approvals/" title="Approvals" class="md-nav__link">
+      Approvals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="Destruction Execution" class="md-nav__link md-nav__link--active">
+      Destruction Execution
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Structure Design
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Structure Design
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../database/graph/" title="Database Graph" class="md-nav__link">
+      Database Graph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../database/tables/" title="Tables" class="md-nav__link">
+      Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../database/queries/" title="Queries" class="md-nav__link">
+      Queries
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../definitions/" title="Definitions" class="md-nav__link">
+      Definitions
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="destruction-execution">Destruction Execution<a class="headerlink" href="#destruction-execution" title="Permanent link">&para;</a></h1>
+<p>So we have selected the customers and applicants that should be deleted according to their retention, completed all flows and approvals and finally we are ready to delete the customers.</p>
+<p>The approved list is inserted to a BCH table. For every row in the BCH table we check the definition table and get the list of tables to be deleted according to entity and retention.</p>
+<p>Suppose that it is a Customer and it is in our radar due to a 10Y retention.</p>
+<p>One example definition that matches these conditions would be the following :</p>
+<table>
+<thead>
+<tr>
+<th>RETENTION</th>
+<th>ENTITY</th>
+<th>TABLENAME</th>
+<th>COLUMNS</th>
+<th>SELECTQUERY</th>
+<th>DELETEQUERY</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10Y</td>
+<td>CUST</td>
+<td>MMS.MUSTERI_ADDRESS</td>
+<td>LOCATIONNAME,ADRESSATIR1,ADRESSATIR2</td>
+<td>QE_DD_SELECT_ADDRESS</td>
+<td>QE_DD_DELETE_ADDRESS</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>We will start by executing the select query with providing the customeroid that is coming from BCH table. This query is the select version of delete query.
+It will be used to backup the columns that are subject to deletion.</p>
+<p><mark class="critic"> QE_DD_SELECT_ADDRESS </mark></p>
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span>
+  <span class="n">OID</span><span class="p">,</span>
+  <span class="n">MA</span><span class="p">.</span><span class="n">LOCATIONNAME</span><span class="p">,</span>
+  <span class="n">MA</span><span class="p">.</span><span class="n">ADRESSATIR1</span><span class="p">,</span>
+  <span class="n">MA</span><span class="p">.</span><span class="n">ADRESSATIR2</span>
+<span class="k">FROM</span>
+  <span class="n">MMS</span><span class="p">.</span><span class="n">MUSTERI_ADRES</span> <span class="n">MA</span>
+<span class="k">WHERE</span>
+   <span class="n">MA</span><span class="p">.</span><span class="n">MUSTERIOID</span> <span class="o">=</span> <span class="o">?</span><span class="p">;</span>
+</pre></div>
+
+<p>Suppose our select query returned 2 rows . With the information coming from BCH table and the result set of above query we will fill our log and backup table and execute the delete query.</p>
+<p><code>sql
+UPDATE MMS.MUSTERI_ADRES MA
+   SET
+   MA.LASTUPDATED = GETLASTUPDATED,
+       MA.LOCATIONNAME = NULL,
+       MA.CAREOF = NULL,
+       MA.FLAT = NULL,
+       MA.BUILDING = NULL,
+       MA.HOUSE = NULL,
+       MA.POSTAKODU = NULL,
+       MA.ADRESSATIR1 = NULL,
+       MA.ADRESSATIR2 = NULL,
+       MA.ADRESSATIR3 = NULL
+ WHERE
+    MA.MUSTERIOID = ?
+    AND exists (select null from MMS.DD_DELETION_LIST l
+                   where l.CUSTOMEROID = MA.CUSTOMEROID
+                     AND l.status = &quot;APPROVED&quot;);</code></p>
+<p>It will be similar two the following:</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../approvals/" title="Approvals" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Approvals
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../database/graph/" title="Database Graph" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Database Graph
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2017 Credit Europe Bank
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-e3caa82af6.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

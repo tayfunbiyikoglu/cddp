@@ -1,0 +1,57 @@
+# Project information
+site_name: 'Customer Data Deletion'
+site_description: 'CEB Data deletion project Techincal documentation'
+site_author: 'Tayfun Biyikoglu'
+site_favicon: 'images/favicon.ico'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2017 Credit Europe Bank'
+
+# Documentation and theme
+theme: 'material'
+
+# Options
+extra:
+  logo: 'images/ceb1.jpg'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+
+pages:
+  - Introduction: index.md
+  - Architectural Design: architecture.md
+  - Implementation Steps:
+      - Customer/Applicant Selection: steps/selection.md
+      - Approvals: steps/approvals.md
+      - Destruction Execution: steps/execution.md
+  - Data Structure Design:
+    - Database Graph: database/graph.md
+    - Tables: database/tables.md
+    - Queries: database/queries.md
+  - Definitions: definitions.md

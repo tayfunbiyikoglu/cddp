@@ -1,0 +1,16 @@
+var _user$project$Repl$t_s_o_l = {ctor: '_Tuple0'};
+var _user$project$Repl$pointsDecoder = A2(_elm_lang$core$Json_Decode$field, 'points', _elm_lang$core$Json_Decode$int);
+var _user$project$Repl$phraseDecoder = A2(_elm_lang$core$Json_Decode$field, 'phrase', _elm_lang$core$Json_Decode$string);
+var _user$project$Repl$json = '{\"id\": 1, \"points\": 100, \"phrase\":\"Web aps for the future\"}';
+var _user$project$Repl$points = A2(_elm_lang$core$Json_Decode$decodeString, _user$project$Repl$pointsDecoder, _user$project$Repl$json);
+var _user$project$Repl$idDecoder = A2(_elm_lang$core$Json_Decode$field, 'id', _elm_lang$core$Json_Decode$int);
+var _user$project$Repl$coming = _elm_lang$core$Maybe$Just(10);
+var _user$project$Repl$c = _elm_lang$core$Maybe$Just(_user$project$Repl$coming);
+var _user$project$Repl$a = _user$project$Repl$coming;
+var _user$project$Repl$d_e_l_t_r_o_n_3_0_3_0 = _user$project$Repl$a;
+var _user$project$Repl$Entry = F3(
+	function (a, b, c) {
+		return {id: a, phrase: b, points: c};
+	});
+var _user$project$Repl$entry = A4(_elm_lang$core$Json_Decode$map3, _user$project$Repl$Entry, _user$project$Repl$idDecoder, _user$project$Repl$phraseDecoder, _user$project$Repl$pointsDecoder);
+var _user$project$Repl$entryStructure = A2(_elm_lang$core$Json_Decode$decodeString, _user$project$Repl$entry, _user$project$Repl$json);
